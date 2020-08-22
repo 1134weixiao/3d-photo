@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link type="text/css" href="css/style.css" rel="stylesheet"/>
-    <!--<script src="./change.js" type="text/javascript"></script>-->
+    <script src="./change.js" type="text/javascript"></script>
 </head>
 <body style="background-color: black;">
     <audio autoplay="autoplay" loop="loop">
@@ -30,7 +30,7 @@
                 <li></li>
             </ol>
         </div>
-        <canvas width="750" height="750" layoutwidth="750" id="sakura"></canvas>
+        <canvas width="100%" height="100%" id="canvas"></canvas>
     </div>
     <!-- sakura shader -->
     <script id="sakura_point_vsh" type="x-shader/x_vertex">
@@ -1750,7 +1750,7 @@
 
         function onResize(e) {
 
-            makeCanvasFullScreen(document.getElementById("sakura"));
+            makeCanvasFullScreen(document.getElementById("canvas"));
 
             setViewports();
 
@@ -1761,8 +1761,6 @@
             }
 
         }
-
-
 
         function setViewports() {
 
@@ -1874,7 +1872,7 @@
 
         window.addEventListener('load', function(e) {
 
-            var canvas = document.getElementById("sakura");
+            var canvas = document.getElementById("canvas");
 
             try {
 
@@ -1982,9 +1980,10 @@
             animenuToggle.addEventListener('click', animenuToggleNav);
 
         }
-
         })()
 
     </script>    
+
+    
 </body>
 </html>
